@@ -216,7 +216,7 @@
                 <img src="img/laravel.png" class="w-full rounded-lg">
                 <div class="px-2 py-2 text-center">
                     <p class="font-bold text-xl mb-2 text-gray-700">E-Data system for research and community service lecturers at LP4M Informatics & Business Institute Darmajaya</p>
-                    <p class="text-gray-700 text-base">E-Data system for research and community service lecturers at LP4M IIB Darmajaya using Laravel.</p>
+                    <p class="text-gray-700 text-base">E-Data system for research and community service lecturers at LP4M IIB Darmajaya using laravel.</p>
                 </div>
             </div>
             <div class="bg-white px-4 py-4 m-2 shadow-lg rounded">
@@ -301,11 +301,29 @@
 			 </a>
 		 </div>
 		 <div class="text-center mt-4 text-gray-600">
-            <i class="far fa-envelope"></i> : ronaldo.lampung09@gmail.com
+            <input type="text" value="ronaldo.lampung09@gmail.com" id="myInput" hidden>
+            <button  class="hover:text-indigo-900" onclick="myFunction()"><i class="far fa-envelope"></i> : ronaldo.lampung09@gmail.com</button >
             <br>
             <i class="fas fa-map-marker-alt"></i> Lampung, Indonesia
         </div>
     </section>
 	<!-- end footer -->
+
+    <script>
+        function myFunction() {
+        /* Get the text field */
+        var copyText = document.getElementById("myInput");
+
+        /* Select the text field */
+        copyText.select();
+        copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+        /* Copy the text inside the text field */
+        navigator.clipboard.writeText(copyText.value);
+
+        /* Alert the copied text */
+        alert("copy email successful");
+        }
+    </script>
   </body>
 </html>
